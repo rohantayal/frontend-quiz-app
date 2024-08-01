@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="./style/index.css">
+
+  <title>Frontend Mentor | Frontend quiz app</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet">
+</head>
+
+<body class="light">
+  <header>
+    <div class="curr-subject">
+    </div>
+
+    <div class="light-dark-toggle">
+      <img src="./assets/images/icon-sun-dark.svg" alt="light toggle" id="sun-icon">
+
+      <label for="light-dark-checkbox" class="light-dark-switch">
+        <input type="checkbox" name="light-dark-toggle" id="light-dark-checkbox">
+        <span class="slider"></span>
+      </label>
+
+      <img src="./assets/images/icon-moon-dark.svg" alt="dark toggle" id="moon-icon">
+    </div>
+
+  </header>
+
+
+  <main>
+
+    <!-- Quiz menu start -->
+    <article class="quiz-menu active">
+
+      <div class="header-quiz-menu">
+        <h1 class="h1">Welcome to the <span class="h1-bold">Frontend Quiz!</span></h1>
+        <p>Pick a subject to get started</p>
+      </div>
+
+      <form action="#" onsubmit="false" class="subject-form">
+
+        <input type="radio" name="subject" class="subject" id="subject-html" value="html">
+        <label for="subject-html" class="subject-wrap" id="subject_html">
+          <div class="html-wrap">
+            <figure class="icons" id="html-icon">
+              <img src="./assets/images/icon-html.svg" alt="html icon">
+            </figure>
+            <p class="subject-text">HTML</p>
+          </div>
+
+        </label>
+
+        <input type="radio" name="subject" class="subject" id="subject-css" value="css">
+        <label for="subject-css" class="subject-wrap" id="subject_css">
+          <div class="css-wrap">
+            <figure class="icons" id="css-icon">
+              <img src="./assets/images/icon-css.svg" alt="css icon">
+            </figure>
+            <p class="subject-text">CSS</p>
+          </div>
+        </label>
+
+        <input type="radio" name="subject" class="subject" id="subject-js" value="js">
+        <label for="subject-js" class="subject-wrap" id="subject_js">
+          <div class="js-wrap">
+            <figure class="icons" id="js-icon"><img src="./assets/images/icon-js.svg" alt="js icon"></figure>
+            <p class="subject-text">JavaScript</p>
+          </div>
+        </label>
+
+        <input type="radio" name="subject" class="subject" id="subject-accessibility" value="accessibility">
+        <label for="subject-accessibility" class="subject-wrap" id="subject_accessibility">
+          <div class="accessibility-wrap">
+            <figure class="icons" id="accessibility-icon"><img src="./assets/images/icon-accessibility.svg"
+                alt="accessibility icon"></figure>
+            <p class="subject-text">Accessibility</p>
+          </div>
+        </label>
+
+      </form>
+
+    </article>
+    <!-- Quiz menu end -->
+
+    <!-- Quiz question start -->
+    <article class="question-menu">
+      <div class="header-question-menu">
+        <p>Question <span id="question-number">6 <!-- number --></span>of 10</p>
+        <h2 id="question">
+          Which of these color contrast ratios defines the minimum WCAG 2.1 Level AA requirement for
+          normal text?
+        </h2>
+        <label for="quiz-progress">
+          <input type="range" name="quiz progress" id="quiz-progress" min="0" max="10" value=0 disabled
+            readonly="1"></label>
+      </div>
+
+      <form action="#" onSubmit="false" class="answer-form">
+
+        <input type="radio" name="answer" class="choice" id="choice-a" value="4.5 : 1">
+        <label for="choice-a" class="choice-wrap" id="choice_a">
+          <p class="choice-number">A</p>
+          <p class="choice-input">4.5 : 1</p>
+        </label>
+
+        <input type="radio" name="answer" class="choice" id="choice-b" value="3 : 1">
+        <label for="choice-b" class="choice-wrap" id="choice_b">
+          <p class="choice-number">B</p>
+          <p class="choice-input">3 : 1</p>
+        </label>
+
+        <input type="radio" name="answer" class="choice" id="choice-c" value="2.5 : 1">
+        <label for="choice-c" class="choice-wrap" id="choice_c">
+          <p class="choice-number">C</p>
+          <p class="choice-input">2.5 : 1</p>
+        </label>
+
+        <input type="radio" name="answer" class="choice" id="choice-d" value="5 : 1">
+        <label for="choice-d" class="choice-wrap" id="choice_d">
+          <p class="choice-number">D</p>
+          <p class="choice-input">5 : 1</p>
+        </label>
+
+        <button class="submit-answer active">Submit answer</button>
+        <button class="next-question">Next Question</button>
+
+      </form>
+
+    </article>
+
+    <!-- Quiz question end -->
+
+    <!-- Quiz completed start -->
+
+    <article class="score-menu">
+
+      <h1 class="h1">Quiz completed <span class="h1-bold">You scored...</span></h1>
+
+
+      <form action="#" class="score-form">
+
+        <div class="score-container">
+          <div class="curr-subject">
+          </div>
+          <h2 id="score-input">8</h2>
+          <p id="out-of-score">out of 10</p>
+
+        </div>
+
+        <input type="reset" id="reset" value="Play again">
+
+      </form>
+
+
+
+    </article>
+
+    <!-- Quiz completed end -->
+
+
+  </main>
+
+  <script src="./main.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
